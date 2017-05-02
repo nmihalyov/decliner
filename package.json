@@ -1,0 +1,25 @@
+{
+	"name": "decliner",
+	"version": "1.0.0",
+	"description": "Decline russian words with Decliner",
+	"author": {
+		"name": "Nikita Mihalyov",
+		"email": "nikita.mihalyov@gmail.com",
+		"url": "http://web-nm.tk/"
+	},
+	"main": "",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nmihalyov/decliner.git"
+	},
+	"keywords": [
+		"decline",
+		"words",
+        "russian"
+	],
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nmihalyov/decliner/issues"
+	},
+	"homepage": "https://github.com/nmihalyov/decliner#readme"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "decliner",
+	"version": "1.0.0",
+	"authors": [
+		"Nikita Mihalyov <nikita.mihalyov@gmail.com>"
+	],
+	"description": "Decline russian words with Decliner",
+	"main": "",
+	"keywords": [
+		"decline",
+		"words",
+        "russian"
+	],
+	"license": "ISC",
+	"homepage": "https://github.com/nmihalyov/decliner#readme"
+}

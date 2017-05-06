@@ -1,6 +1,6 @@
 {
 	"name": "decliner",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Decline russian words with Decliner",
 	"author": "Nikita Mihalyov <nikita.mihalyov@gmail.com> (http://web-nm.tk/)",
 	"main": "",

@@ -21,7 +21,7 @@
 
 			if (typeof(insert) !== 'boolean') throw new TypeError('second argument in decline() should be boolean');
 
-			result = optionsArray[ (absNum % 100 > 4 && absNum % 100 < 20) ? 2 : cases[(absNum % 10 < 5) ? absNum % 10 : 5] ];
+			result = optionsArray[ (absNum % 1 !== 0) ? 1 : (absNum % 100 > 4 && absNum % 100 < 20) ? 2 : cases[(absNum % 10 < 5) ? absNum % 10 : 5] ];
 		} catch (e) {
 			console.error('decliner.js error: ' + e.name + ' - ' + e.message);
 		}

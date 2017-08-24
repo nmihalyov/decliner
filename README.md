@@ -1,15 +1,15 @@
 # decliner.js
-### Мини-библиотека для склонения исчисляемых русских слов
+### Мини-библиотека (634 байта) для склонения исчисляемых русских слов
 ![decliner logo](https://drive.google.com/uc?export=view&id=0B7lALWrgWMxpcWd0ZHhGNWxWVGs)
 
 ### Установка
 Несколько вариантов установки библиотеки:
-+ Склонировать репозиторий: ```git clone https://github.com/nmihalyov/decliner.git```
-+ Скачать .zip архив (зелёная кнопка "Clone or download" на главной странице библиотеки)
++ Склонировать репозиторий: **`git clone https://github.com/nmihalyov/decliner.git`**
++ Скачать .zip архив (зелёная кнопка **"Clone or download"** на главной странице библиотеки)
 + Загрузка с помощью пакетных менеджеров:
-  - NPM: ```npm i decliner --save-dev```
-  - Bower: ```bower i decliner -D```
-  - Yarn: ```yarn add decliner -D```
+  - NPM: **`npm i decliner --save-dev`**
+  - Bower: **`bower i decliner -D`**
+  - Yarn: **`yarn add decliner -D`**
 
 Далее просто включите библиотеку в ваш проект:
 ```html
@@ -19,14 +19,14 @@
 ```html
 <script src="%path%/decliner/dist/decliner.min.js"></script>
 ```
-(где ```%path%``` - путь от корня проекта до папки в которую устанавливается пакет (или распаковвывается архив))
+(где ```%path%``` - путь от корня проекта до папки в которую устанавливается пакет (или распаковывается архив))
 
 ### Использование
 Для начала работы необходимо создать массив из трёх строк (вариантов склонения) в строгом порядке: 1 %предмет%, 2 %предмета%, 5 %предметов%
 
 Например  
 ```javascript
-var rubles = ['рубль', 'рубля', 'рублей'];
+let rubles = ['рубль', 'рубля', 'рублей'];
 ```
 
 Используя этот массив можно вызвать метод ```decline()``` в аргумент, которой передать необходимое число:
@@ -41,7 +41,7 @@ rubles.decline(105, true); // "105 рублей"
 
 Упрощённая форма для многократного обращения:
 ```javascript
-var rublesDecline = function (n) {
+let rublesDecline = n => {
   return rubles.decline(n, true);
 }
 
@@ -64,5 +64,5 @@ rublesDecline(-0.4); // "-0.4 рубля"
 Благодарность можно выразить поставив этому репозиторию звезду, а также зайдя в другие репозитории моего аккаунта
 
 Контакты для связи:  
-почта - nikita.mihalyov@gmail.com  
-telegram - https://telegram.me/nmihalyov
+Почта - nikita.mihalyov@gmail.com  
+Telegram - https://telegram.me/nmihalyov

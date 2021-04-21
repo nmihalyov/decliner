@@ -9,7 +9,6 @@
 + Загрузка с помощью пакетных менеджеров:
   - NPM: **`npm i decliner`**
   - Yarn: **`yarn add decliner`**
-  - Bower: **`bower i decliner`**
 
 Далее просто включите библиотеку в ваш проект:
 ```html

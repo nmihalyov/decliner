@@ -1,15 +1,15 @@
 # decliner.js
 ### Мини-библиотека (637 байтов) для склонения исчисляемых русских слов
-![decliner logo](https://drive.google.com/uc?export=view&id=0B7lALWrgWMxpcWd0ZHhGNWxWVGs)
+![decliner logo](decliner.png)
 
-### Установка
+## Установка
 Несколько вариантов установки библиотеки:
 + Склонировать репозиторий: **`git clone https://github.com/nmihalyov/decliner.git`**
-+ Скачать .zip архив (зелёная кнопка **"Clone or download"** на главной странице библиотеки)
++ Скачать .zip архив (зелёная кнопка **"Code"** -> **"Download ZIP"** на главной странице библиотеки)
 + Загрузка с помощью пакетных менеджеров:
-  - NPM: **`npm i decliner --save-dev`**
-  - Bower: **`bower i decliner -D`**
-  - Yarn: **`yarn add decliner -D`**
+  - NPM: **`npm i decliner`**
+  - Bower: **`bower i decliner`**
+  - Yarn: **`yarn add decliner`**
 
 Далее просто включите библиотеку в ваш проект:
 ```html
@@ -21,7 +21,7 @@
 ```
 (где ```%path%``` - путь от корня проекта до папки в которую устанавливается пакет (или распаковывается архив))
 
-### Использование
+## Использование
 Для начала работы необходимо создать массив из трёх строк (вариантов склонения) в строгом порядке: 1 %предмет%, 2 %предмета%, 5 %предметов%
 
 Например  
@@ -29,7 +29,7 @@
 const rubles = ['рубль', 'рубля', 'рублей'];
 ```
 
-Используя этот массив можно вызвать метод ```decline()``` в аргумент, которой передать необходимое число:
+У данного массива можно вызвать метод ```decline()``` в аргумент, которой передать необходимое число:
 ```javascript
 rubles.decline(105); // "рублей"
 ```
@@ -46,7 +46,7 @@ const rublesDecline = n => rubles.decline(n, true);
 rublesDecline(123); // "123 рубля"
 ```
 
-### Дополнительная информация
+## Дополнительная информация
 **decliner.js** умеет работать и с отрицательными значениями:
 ```javascript
 rublesDecline(-50); // "-50 рублей"
@@ -59,6 +59,13 @@ rublesDecline(0.4); // "0.4 рубля"
 
 Благодарность можно выразить поставив этому репозиторию звезду, а также зайдя в другие репозитории моего аккаунта
 
-Контакты для связи:  
-Почта - nikita.mihalyov@gmail.com  
-Telegram - https://telegram.me/nmihalyov
+## Обратная связь
+Почта: [nikita.mihalyov@gmail.com](mailto:nikita.mihalyov@gmail.com)
+
+Telegram: [@nmihalyov](http://t.me/nmihalyov)
+
+ВКонтакте: [vk.com](https://vk.com/nmihalyov)
+
+Мой сайт: [nmihalyov.tk](http://nmihalyov.tk)
+
+[Написать issue](https://github.com/nmihalyov/decliner/issues/new)

@@ -1,32 +1,60 @@
-;(function () {
-	'use strict';
+const checkArray = array => {
+  if (!Array.isArray(array)) {
+    throw new Error('The first constructor argument should be an array');
+  }
+  
+  if (array.length !== 3) {
+    throw new Error('Array must have 3 elements');
+  }
+  
+  array.forEach(string => {
+    if (typeof string !== 'string') throw new Error('Array must have only strings');
+  });
+}
 
-	Array.prototype.decline = function (num, insert) {
-		const optionsArray = this;
-		const absNum = Math.abs(num);
-		const cases = [2, 0, 1, 1, 1, 2];
-		let result = '';
+const checkOptions = options => {
+  if (options === null || typeof options !== "object" || Object.getPrototypeOf(options) !== Object.prototype) {
+    throw new Error('Options must be an object');
+  }
+}
 
-		insert = insert || false;
+class Decliner {
+  #options;
+  #cases;
 
-		try {
-			if (optionsArray.length !== 3) throw new SyntaxError('array must have 3 elements');
+  constructor(array, options = {}) {
+    checkArray(array);
+    checkOptions(options);
 
-			optionsArray.map((el, i) => {
-				if (typeof(el) !== 'string') throw new TypeError('element #' + (i + 1) + ' is not a string in array [' + optionsArray + ']');
-			});
+    this.array = array;
+    this.#options = options;
 
-			if (typeof(num) !== 'number') throw new TypeError('decline() argument is not a number');
+    this.#cases = [2, 0, 1, 1, 1, 2];
+  }
 
-			if (typeof(insert) !== 'boolean') throw new TypeError('second argument in decline() should be boolean');
+  setOptions(options) {
+    this.#options = {
+      ...this.#options,
+      ...options
+    };
+  
+    return this;
+  }
 
-			result = optionsArray[(absNum % 1 !== 0) ? 1 : (absNum % 100 > 4 && absNum % 100 < 20) ? 2 : cases[(absNum % 10 < 5) ? absNum % 10 : 5]];
-	
-			if (insert === true) result = `${num} ${result}`;
-	
-			return result;
-		} catch (e) {
-			console.error(`decliner.js error: ${e.name} - ${e.message}`);
-		}
-	}
-})();
+  decline(num) {
+    if (typeof num !== 'number') throw new Error('Decline argument must be a number');
+  
+    const absoluteNum = Math.abs(num);
+    let result = '';
+
+    result = this.array[(absoluteNum % 1 !== 0) ? 1 : (absoluteNum % 100 > 4 && absoluteNum % 100 < 20) ? 2 : this.#cases[(absoluteNum % 10 < 5) ? absoluteNum % 10 : 5]];
+
+    if (this.#options.format) {
+      result = this.#options.format.replaceAll('{{value}}', result).replaceAll('{{num}}', num);
+    }
+
+    return result;
+  }
+}
+
+export default Decliner;

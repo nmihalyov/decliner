@@ -1,24 +1,32 @@
 {
 	"name": "decliner",
-	"version": "1.1.4",
+	"version": "2.0.0",
 	"description": "Decline russian words with Decliner",
-  "author": {
+	"author": {
 		"name": "Nikita Mihalyov",
 		"email": "nikita.mihalyov@gmail.com",
 		"url": "http://nmihalyov.tk/"
 	},
-	"main": "",
+	"main": "dist/decliner.js",
 	"repository": "git+https://github.com/nmihalyov/decliner.git",
 	"keywords": [
 		"decline",
 		"words",
 		"russian",
-    "javascript",
-    "library"
+		"javascript",
+		"library"
 	],
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/nmihalyov/decliner/issues"
 	},
-	"homepage": "https://github.com/nmihalyov/decliner#readme"
+	"homepage": "https://github.com/nmihalyov/decliner#readme",
+	"scripts": {
+		"test": "jest"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.16.0",
+		"babel-jest": "^27.3.1",
+		"jest": "^27.3.1"
+	}
 }
